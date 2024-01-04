@@ -1,0 +1,242 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+   
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    animation : animate 10s ease-in-out infinite;
+    background-size: cover;
+    
+    
+}
+@keyframes animate
+{
+    0%{
+        background-image: url(images/2.png);
+    }
+    25%{
+        background-image: url(images/3.png);
+    }
+    50%{
+        background-image: url(images/4.png);
+    }
+    750%{
+        background-image: url(images/5.png);
+    }
+    850%{
+        background-image: url(images/6.png);
+    }
+    100%{
+        background-image: url(images/22.png);
+    }
+}
+.menu-bar
+{
+    background-color: rgb(180, 240, 180);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: #010101;
+}
+.menu-bar ul li
+{
+    width: 90px;
+    margin: 10px;
+    padding: 10px;
+}
+.menu-bar h2
+{
+    display: flex;
+    text-align: left;
+    /* margin-right: 250px; */ 
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: #000000;
+}
+.active, .menu-bar ul li:hover
+{
+    background-color: rgb(240, 195, 116);
+    border-radius: 20px;
+}
+.menu-bar.fa
+{
+    margin-right: 8px;
+}
+.sub-menu-1{
+    display: none;
+    
+}
+.menu-bar ul li:hover  .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background-color: rgb(255, 255, 254);
+    /* background-color:rgb(180, 240, 180); */
+    margin-top: 10px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover  .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover  .sub-menu-1 ul li
+{
+    width: 150px;
+    border: 10px;
+    border-bottom: 2px solid rgb(232, 77, 5);
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+{
+    color: rgb(255, 119, 0);
+}
+.fa-angle-right
+{
+    float: right;
+}
+.sub-menu-2
+{
+    display: none;
+}
+.hover-me:hover .sub-menu-2
+{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background-color: rgb(28, 104, 12);
+}
+
+/* ======================================================= */
+
+.main-section
+{
+   margin-top: 100px;
+   margin-left: 200px;
+   
+}
+.main p
+{
+    color: rgb(109, 120, 6);
+    margin-bottom: 50px;
+}
+.main h2
+{
+    color: aqua;
+    font-weight: 250px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.name
+{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 190px;
+    line-height: 160px;
+    color: transparent;
+    -webkit-text-size-adjust: 1px #fff;
+    background: url(images/12.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    }
+    @keyframes back{
+        100%{
+            background-position: 2000px 0;
+        }
+    }
+.main a
+{
+    position: relative;
+    background: #fff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: .01em ;
+    font-weight: 400px;
+    padding: 10px 30px ;
+    transition: .5s;
+
+}
+.main a:hover
+{
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: .25em;
+    box-shadow: 0 0 35px var(--clr);
+}
+.main a::before
+{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+}
+.main a span
+{
+    position: relative;
+    z-index: 1;
+}
+.main a i
+{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+.main a i::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: #27282c;
+    transform: translateX(-50%) skew(325deg);
+    transition: .05s;
+
+}
+.main a:hover i::before
+{
+    width: 20px ;
+    left: 20%;
+}
+
+.main a i::after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: #27282c;
+    transform: translateX(-50%) skew(325deg);
+    transition: .05s;
+
+}
+.main a:hover i::after
+{
+    width: 20px ;
+    left: 80%;
+}
